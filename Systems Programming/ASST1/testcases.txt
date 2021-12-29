@@ -1,0 +1,18 @@
+Workload D:
+
+	This workload attempts to randomly allocate memory sizes between 0 and 10 bytes, 
+    storing the pointers in an array. Once a call to malloc() fails, the workload 
+    will stop trying to allocate more memory and free all of the pointers.
+
+
+Workload E:
+
+	This function covers the following steps:
+
+        Loop 10 times through a series of malloc() and free() workload calls:
+            - Allocate memory blocks until its reach's the end of the virtual memory available
+            - Free every other memory block
+            - Allocate memory blocks in chunks of 25
+            - Free all allocated memory
+
+

@@ -1,0 +1,25 @@
+Test case 1:
+     correctly respond to the knock knock joke:
+        1. REG|12|Who's there?|
+        2. REG|9|Who, who?|
+        3. REG|4|Ugh.|
+
+Test case 2:
+     start the server with an invalid port which will print out an error message
+        1. ./KKJserver 100
+
+Test case 3:
+     Incorrectly submit the first response, which will trigger the server to print an 
+     error message to stdout and shutdown the server
+        1. REG|12|Who's not there?|
+
+Test case 4:
+     Respond to the start of the joke with an ERR response
+        1. ERR|M0CT|
+
+Test case 5:
+     The second client response doesn't include punctuation. This will trigger the server to
+     print an error message to stdout and shutdown the server
+
+
+   
